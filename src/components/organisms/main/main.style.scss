@@ -1,0 +1,116 @@
+.main {
+    width: 960px;
+    margin: 0 auto;
+
+    &_banner {
+
+        &_bannerImage {
+            background-image: url("Banner image.png");            
+            width: 960px;
+            height: 280px;
+            background-color: rgb(226, 226, 226); 
+
+            .p1 {
+                font-size: 42px;
+                font-family: "Oswald";
+                color: rgb(90, 90, 90);
+                text-transform: uppercase;
+                padding-left: 37px;
+                padding-top: 30px;
+                top: 70px;
+              }
+
+            .p2 {
+                font-size: 20px;
+                font-family: "Oswald";
+                color: rgb(172, 172, 172);
+                padding-left: 37px;
+              }
+        }
+
+        &_bannerNav {
+            display: flex;
+            flex-direction: row;
+            //justify-content: space-around;
+            background-color: rgb(243, 243, 243);
+            border-bottom: 1px solid rgb(231, 231, 231);
+            height: 50px;
+
+            &_item {
+                cursor: pointer;
+                display: flex;
+                padding-left: 12px;
+                //justify-content: center;
+                align-items: center;
+                width:calc( 100% / 4 );
+                font-size: 18px;
+                font-family: "Oswald";
+                color: rgb(143, 143, 143);
+                text-transform: uppercase;
+
+                &:before {
+                    content: attr(data);
+                    background-color: rgb(143, 143, 143);
+                    font-size: 16px;
+                    font-family: "Oswald";
+                    color: rgb(255, 255, 255);
+                    width: 23px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 12px;                                            
+                }    
+            }
+        }
+    }
+
+    &_button--active {
+        color: rgb(41, 197, 230);
+    
+        &:before {
+            content: attr(data);
+            background-color: rgb(41, 197, 230);                              
+        }    
+    }
+
+    //BLOCKS
+
+    &_blocks {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_item {
+            flex-basis: ( 100% / 3 );
+            padding: 10px 10px;
+
+            &:nth-child(-n+2) {                  //описываем первые два потомка
+                flex-basis: 50%;
+            }
+
+            &_topLine {
+                font-size: 14px;
+                font-family: "Oswald";
+                color: rgb(126, 126, 126);
+                text-transform: uppercase;
+                padding-bottom: 10px;
+
+                &:before {
+                    content: attr(data);
+                    color:  rgb(41, 197, 230);
+                    background-color:  rgb(41, 197, 230);
+                    margin-right: 10px;
+                }
+            }
+
+            p {
+                //padding: 15px 15px;
+                font-size: 12px;
+                font-family: "Tahoma";
+                color: rgb(143, 143, 143);
+                  
+            }
+        }
+    }
+}
+
+
